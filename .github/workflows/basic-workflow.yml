@@ -2,11 +2,13 @@ name: GitHub actions demo
 run-name: Testing our Github actions
 
 on: [push]
+env:
+  owner_name: jeet
 
 jobs:
   basic_workflow:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "job is executing as part of basic workflow"
+      - run: echo "job basic_workflow is executing as part of new workflow - from $owner_name"
       
